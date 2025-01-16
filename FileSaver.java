@@ -1,7 +1,6 @@
 //Griffin Hampton CSE 220
 /*
-
- */
+*/
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,24 +10,31 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class FileSaver {
-    public static void runFileCheck() {
-        String fileName = "C:\\Users\\ghamp\\IdeaProjects\\CSE-220\\src\\tutorialJournal.txt";
-        String[] pages = {
-                ""
+    private final String fileName;
+    private final String[] pages;
+    public FileSaver() {
+        fileName = "C:\\Users\\ghamp\\IdeaProjects\\CSE-220\\src\\tutorialJournal.txt";
+        pages = new String[] {
+""
+
         };
+    }
+
+    public static void runFileCheck() {
+        FileSaver myObj = new FileSaver();
         try {
-            File tutorialText = new File("src");
+            File tutorialText = new File(myObj.fileName);
 
             if (tutorialText.createNewFile()) {
                 System.out.println("file created");
-                FileWriter tutorialWriter = new FileWriter(fileName);
-                tutorialWriter.write(pages[0]);
+                FileWriter tutorialWriter = new FileWriter(myObj.fileName);
+                tutorialWriter.write(myObj.pages[0]);
                 tutorialWriter.close();
 
             }
             else {
                 System.out.println("adding to file now");
-                Files.write(Paths.get(fileName), pages[0].getBytes(), StandardOpenOption.APPEND);
+                Files.write(Paths.get(myObj.fileName), (myObj.pages[0]).getBytes(), StandardOpenOption.APPEND);
             }
 
 
@@ -36,7 +42,8 @@ public class FileSaver {
             System.out.println("oopsie error");
             e.printStackTrace();
         }
-        System.out.println("it ran");
+        System.out.println("what was added:\n \""+ myObj.pages[0]+"\"");
+        System.out.println("\nit was printed into the file: "+myObj.fileName);
     }
 
 }
