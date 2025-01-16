@@ -1,100 +1,290 @@
 Getting used to java syntax
 
-things to remember:
-it is "true" not "True" with bools
-System.out.println("Hello" + variableName);
+                
 
-The byte data type can store whole numbers from -128 to 127.
-This can be used instead of int or other integer types to save memory when you are certain
-that the value will be within -128 and 127.
+                things to remember:
 
-The 'short' data type can store whole numbers from -32768 to 32767.
+                it is \"true\" not \"True\" with bools
 
-The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807.
-This is used when int is not large enough to store the value.
-Note that you should end the value with an "L".
+                System.out.println(\"Hello\" + variableName);
 
-The float and double data types can store fractional numbers.
-Note that you should end the value with an "f" for floats and "d" for doubles:
-d=more decimal points, f=less.
+                
 
-A floating point number can also be a scientific number with an "e" to indicate the power of 10:
-float f1 = 35e3f;
-double d1 = 12E4d;
+                The byte data type can store whole numbers from -128 to 127.
 
-smallest to largest:
-byte -> short -> char -> int -> long -> float -> double
+                This can be used instead of int or other integer types to save memory when you are certain
 
-String len found w .length()
+                that the value will be within -128 and 127.
 
-.toLowerCase()
-.toUpperCase()
-JAVA HAS IT YES!!!!
+                
 
-.indexOf("letter") finds the position of a certain item in a string, im sure it works w arrays
-too
+                The 'short' data type can store whole numbers from -32768 to 32767.
 
-System.out.println(string1.concat(string2));
-puts both strings together like System.out.println(string1+""+string2);
+                
 
-to use an escape character put a backslash in front of it
+                The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807.
 
-Math dictionary has min(x,y),max(x,y),sqrt(square root),abs(absolute value),random (between 0.0, 1.0)
-multiply it to get bigger random numbers
+                This is used when int is not large enough to store the value.
 
-bool can be (10<9) returns false bc not true, 10==10 returns true
+                Note that you should end the value with an \"L\".
 
-? and : can work as an if else statement
-EX:
-String result = (time < 18) ? "Good day." : "Good evening.";
-if time<18 it prints "Good day." otherwise it prints "Good evening"
+                
 
-switch statements function as if else
-EX:
-int day=4;
-switch(day){
-case 1:
-System.out.println("monday");
-break;
-ETCETERA ETCETERA
-default:
-System.out.println("not a day in the week");
-}
+                The float and double data types can store fractional numbers.
 
-default works like the final else
+                Note that you should end the value with an \"f\" for floats and \"d\" for doubles:
 
-do{
-}
-while(conditions);
-works too
+                d=more decimal points, f=less.
 
-for each works like for each item in list run loop yf
-EX:
-String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-for (String i : cars) {
-  System.out.println(i);
-}
-would run 4 times
+                
 
-continue; stops a loop for one iteration, slightly less powerful break;
+                A floating point number can also be a scientific number with an \"e\" to indicate the power of 10:
 
-ARRAYS WORK LIKE PYTHON NOT C!!!
-String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+                float f1 = 35e3f;
 
-A multidimensional array is an array of arrays.
-Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
-To create a two-dimensional array, add each array within its own set of curly braces:
+                double d1 = 12E4d;
 
-int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-for (int i = 0; i < myNumbers.length; ++i) {
-  for (int j = 0; j < myNumbers[i].length; ++j) {
-    System.out.println(myNumbers[i][j]);
-  }
-}
-int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-for (int[] row : myNumbers) {
-  for (int i : row) {
-    System.out.println(i);
-  }
-}
-both do the same thing
+                
+
+                smallest to largest:
+
+                byte -> short -> char -> int -> long -> float -> double
+
+                
+
+                String len found w .length()
+
+                
+
+                .toLowerCase()
+
+                .toUpperCase()
+
+                JAVA HAS IT YES!!!!
+
+                
+
+                .indexOf(\"letter\") finds the position of a certain item in a string, im sure it works w arrays
+
+                too
+
+                
+
+                System.out.println(string1.concat(string2));
+
+                puts both strings together like System.out.println(string1+\"\"+string2);
+
+                
+
+                to use an escape character put a backslash in front of it
+
+                
+
+                Math dictionary has min(x,y),max(x,y),sqrt(square root),abs(absolute value),random (between 0.0, 1.0)
+
+                multiply it to get bigger random numbers
+
+                
+
+                bool can be (10<9) returns false bc not true, 10==10 returns true
+
+                
+
+                ? and : can work as an if else statement
+
+                EX:
+
+                String result = (time < 18) ? \"Good day.\" : \"Good evening.\";
+
+                if time<18 it prints \"Good day.\" otherwise it prints \"Good evening\"
+
+                
+
+                switch statements function as if else
+
+                EX:
+
+                int day=4;
+
+                switch(day){
+
+                case 1:
+
+                System.out.println(\"monday\");
+
+                break;
+
+                ETCETERA ETCETERA
+
+                default:
+
+                System.out.println(\"not a day in the week\");
+
+                }
+
+                
+
+                default works like the final else
+
+                
+
+                do{
+
+                }
+
+                while(conditions);
+
+                works too
+
+                
+
+                for each works like for each item in list run loop yf
+
+                EX:
+
+                String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};
+
+                for (String i : cars) {
+
+                  System.out.println(i);
+
+                }
+
+                would run 4 times
+
+                
+
+                continue; stops a loop for one iteration, slightly less powerful break;
+
+                
+
+                ARRAYS WORK LIKE PYTHON NOT C!!!
+
+                String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};
+
+                
+
+                A multidimensional array is an array of arrays.
+
+                Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
+
+                To create a two-dimensional array, add each array within its own set of curly braces:
+
+                
+
+                int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+
+                for (int i = 0; i < myNumbers.length; ++i) {
+
+                  for (int j = 0; j < myNumbers[i].length; ++j) {
+
+                    System.out.println(myNumbers[i][j]);
+
+                  }
+
+                }
+
+                int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+
+                for (int[] row : myNumbers) {
+
+                  for (int i : row) {
+
+                    System.out.println(i);
+
+                  }
+
+                }
+
+                both do the same thing
+
+                
+
+                If you want the method to return a value,
+
+                you can use a primitive data type (such as int, char, etc.) instead of void,
+
+                 and use the return keyword inside the method:
+
+                
+
+                public class Main {
+
+                  static int myMethod(int x, int y) {
+
+                    return x + y;
+
+                  }
+
+                
+
+                  public static void main(String[] args) {
+
+                    System.out.println(myMethod(5, 3));
+
+                  }
+
+                }
+
+                Outputs 8 (5 + 3)
+
+                
+
+                Overloading a method is remaking a method with the new data type but the same name
+
+                it is for concise and neat looking code
+
+                EX:
+
+                static int plusMethod(int x, int y) {
+
+                  return x + y;
+
+                }
+
+                
+
+                static double plusMethod(double x, double y) {
+
+                  return x + y;
+
+                }
+
+                
+
+                public static void main(String[] args) {
+
+                  int myNum1 = plusMethod(8, 5);
+
+                  double myNum2 = plusMethod(4.3, 6.26);
+
+                  System.out.println(\"int: \" + myNum1);
+
+                  System.out.println(\"double: \" + myNum2);
+
+                }
+
+                
+
+                Java uses scope and therefore any variables within one particular method (around curly brackets)
+
+                are accessible everywhere withing said scope.
+
+                
+
+                To create multiple class calls you have to create multiple class objects
+
+                EX:
+ Main myObj1 = new Main(); 
+ Main myObj2 = new Main();
+                
+
+                When using static method you ----->DO NOT<----- have to create a whole obj for it
+
+                EX: you can call a static method using just myStaticMethod() while a public method need
+
+                Main myObj = new Main();
+myObj.myPublicMethod;
+
+                
+
