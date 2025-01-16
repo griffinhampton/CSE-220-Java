@@ -287,4 +287,37 @@ Getting used to java syntax
 myObj.myPublicMethod;
 
                 
+As long as a variable is defined in the same class it can be used throughout any methods within that class, it's called an attribute when it does that.
 
+If you make 2 classes you must use:
+ClassName newVar = new ClassName();
+System.out.println(myVar.X);
+
+You can change attributes in methods. But it cannot be changed if you put 'final' before the declaration.
+
+!!!!!!!!!!!!!!! THIS IS A C CONCEPT !!!!!!!!!!!!!!!
+___________________________________________________________________________________________________________________________________________________________
+understanding pointers: when putting a "*" in front of a variable name it's saying it will point to the location of the variable
+what this does is allow for values to be accessed by address, and therefore be able to be changed thru just pointing at the address.
+what this does is allow a pointer to find the start of an array, and then change the values in the said array by changing the values
+within the memory theyre being held. EX:
+5. Arrays and Pointers:
+Arrays are closely related to pointers. The name of an array decays into a pointer to the first element of the array.
+C
+
+   int arr[5] = {1, 2, 3, 4, 5};
+   int *ptr = arr; // ptr points to the first element of the array
+
+   printf("%d\n", *ptr); // Prints 1
+   printf("%d\n", *(ptr + 1)); // Prints 
+   
+the flaw of this is that if you let say do *(ptr +100000) and theres nothing at 1000000 then you will get a null pointer. the pointer points at nothing.
+___________________________________________________________________________________________________________________________________________________________
+
+Naming conventions in java MATTER. When you have a public class you HAVE to have a constructor share a name with it or else it doesn't work!
+what you put in front of the variable name determine not only what type of data type being stored
+but ALSO how accessible the variables are. for example a "public" variable can be accessed anywhere in the program
+whereas a private variable can only be accessed in the same class. essentially make all date private.
+
+
+final variables mean they cannot be inherited in any other classes
